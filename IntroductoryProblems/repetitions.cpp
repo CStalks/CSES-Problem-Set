@@ -9,10 +9,10 @@ int main(){
 
     char ch = seq[0];
 
-    for(int i = 0; i < seq.length(); i++){
+    for(int i = 0; i < (int)(seq.length()); i++){
         if(ch == seq[i]){
             seqCt++;
-            if(maxSeqCt < seqCt) maxSeqCt = seqCt;
+            maxSeqCt = max(maxSeqCt,seqCt);
         } else {
             seqCt = 0; seqCt++;
             ch = seq[i];
